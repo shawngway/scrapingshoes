@@ -1,7 +1,7 @@
 const mongoose = require(`mongoose`);
 var express = require("express");
 var logger = require("morgan");
-var mongoose = require("mongoose");
+
 
 
 var axios = require("axios");
@@ -15,10 +15,8 @@ var PORT = 3000;
 var app = express();
 
 app.use(logger("dev"));
-// Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Make public a static folder
 app.use(express.static("public"));
 
 mongoose.connect(
@@ -118,7 +116,7 @@ app.post("/articles/:id", function (req, res) {
 });
 
 // Start the server
-app.listen(PORT, function () {
+app.listen(process.env.PORT || PORT, function () {
     console.log("App running on port " + PORT + "!");
 });
 
