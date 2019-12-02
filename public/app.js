@@ -6,6 +6,14 @@ $.getJSON("/articles", function(data) {
   }
 });
 
+$(document).on("click", "scrapeKey", function() {
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+  })
+  .then(console.log("scrape complete"))
+});
+
 
 
 $(document).on("click", "h2", function() {
