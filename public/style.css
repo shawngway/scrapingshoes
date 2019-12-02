@@ -1,20 +1,26 @@
 body {
-    background-color: #3D460F;
+    background-color: #E2E6F0;
 }
 .container {
     background-color: #E4FD64;
 }
+
 #wrapper {
         width: 960px;
         margin-left: auto;
         margin-right: auto;
         padding-top: 5%;
       }
+.titleBack {
+  background-color: #3A61CA;
+}
 #articles {
         display: inline-block;
         overflow: auto;
         width: 60%;
         height: 700px;
+        background-color: 	
+        #E8F290;
       }
 #notes {
         float: right;
@@ -36,6 +42,7 @@ textarea {
 #title {
     color: #130421;
     font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
 
 }
 .titleArea {
@@ -45,4 +52,11 @@ textarea {
 p {
     color: #130421;
     font: bolder;
+}
+.tire-title {
+  font-size: 20px;
+  font-style: oblique;
+}
+.price {
+  color: green;
 }

@@ -2,13 +2,13 @@
 $.getJSON("/articles", function(data) {
 
   for (var i = 0; i < data.length; i++) {
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+    $("#articles").append("<h2 class='tire-title' data-id='" + data[i]._id + "'>" + data[i].title + "</h2>" + "<p class='price'>" + '$' + data[i].price + "</ p>");
   }
 });
 
 
 
-$(document).on("click", "p", function() {
+$(document).on("click", "h2", function() {
   $("#notes").empty();
   var thisId = $(this).attr("data-id");
 
