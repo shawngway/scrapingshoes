@@ -6,13 +6,19 @@ $.getJSON("/articles", function(data) {
   }
 });
 
-$(document).on("click", "scrapeKey", function() {
+$(document).on("click", ".scrapeKey", function() {
   $.ajax({
     method: "GET",
     url: "/scrape"
   })
   .then(console.log("scrape complete"))
+  alert("Your tires have been added")
 });
+
+$(document).on("click", ".homeKey", function() {
+  location.reload();
+});
+
 
 
 
